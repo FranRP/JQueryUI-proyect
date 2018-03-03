@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Hello, world!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css'
+          integrity='sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb' crossorigin='anonymous'>
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'
+          integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN' crossorigin='anonymous'>
+    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/blitzer/jquery-ui.css">
+    <link rel="stylesheet" href="style/css.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="style/animate.css">
+    <script src="js/wow.min.js"></script>
+    <link id="estilos" type="text/css" rel="stylesheet" href="themes/light/jquery-ui.css"/>
+    <script>
+        new WOW().init();
+    </script>
+
+    <style media="screen">
+
+
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+    <img src="http://gnarf.net/widget-factory/images/jqueryui_logo.png" alt="" class="img-fluid" id="logo">
+    <a class="navbar-brand">KarsManía</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+                   data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Themes
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <button id="light" class="dropdown-item">Light</button>
+                    <button id="dark" class="dropdown-item">Darkness</button>
+                    <button id="flick" class="dropdown-item">Flick</button>
+                    <div class="dropdown-divider"></div>
+                    <p id="info" style="font-weight: bold" class="dropdown-item">Tema actual: Light</p>
+                </div>
+            </li>
+        </ul>
+        <ol class="breadcrumb text-right">
+            <li class="breadcrumb-item active">KarsManía</li>
+            <li style="color:#ff9f52 !important;" class="breadcrumb-item active">Home</li>
+        </ol>
+
+    </div>
+</nav>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100 img-fluid"
+                 src="img/slide1.jpg"
+                 alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h2>Tu página de vehículos confianza ahora y siempre</h2>
+                <p>Página realizada con Bootstrap y JQueryUI</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 img-fluid"
+                 src="img/slide2.jpg"
+                 alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h2>Diseño y funcionalidad realizado por:</h2>
+                <p>Francisco Manuel Roldán Përez</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 img-fluid"
+                 src="img/slide3.jpg"
+                 alt="Third slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h2>Diseñador y programador web de Francisco Ayala</h2>
+                <p>Proyecto de DWEB</p>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<div class="container cuerpo">
+    <h1 class="text-center animated fadeIn">KarsManía - Registro de cliente</h1>
+    <form>
+        <div class="form-row">
+            <div class="col-md-6 col-12 wow fadeInLeft pregunta" data-wow-duration="1s">
+                <label for="nombreexample">Nombre</label>
+                <div class="input-group">
+                    <span class="input-group-addon" id="nombreInfo"><i class="fa fa-font"></i></span>
+                    <input required type="text" name="nombre" class="form-control" id="nombreexample"
+                           aria-describedby="nombreHelp" placeholder="Francisco Manuel">
+                </div>
+
+                <small id="nombreHelp" class="form-text text-muted">Danos tu nombre real</small>
+            </div>
+            <div class="col-md-6 col-12 wow fadeInRight pregunta" data-wow-duration="1s">
+                <label for="apellidosexample">Apellidos</label>
+                <div class="input-group">
+                    <span class="input-group-addon" id="apellidosInfo"><i class="fa fa-male"></i></span>
+                    <input required type="text" name="apellidos" class="form-control" id="apellidosexample"
+                           aria-describedby="apellidosHelp" placeholder="Roldán">
+                </div>
+
+                <small id="apellidosHelp" class="form-text text-muted">Introduce tus apellidos reales
+                </small>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 col-12 wow fadeInLeft pregunta" data-wow-duration="1s">
+                <label for="telefonoExample">Teléfono</label>
+                <div class="input-group">
+                    <span class="input-group-addon" id="telefonoInfo"><i class="fa fa-phone"></i></span>
+                    <input required type="number" name="telefono" class="form-control" id="telefonoExample"
+                           aria-describedby="telefonoHelp" placeholder="616">
+                </div>
+
+                <small id="telefonoHelp" class="form-text text-muted">Introduce tu teléfono real</small>
+            </div>
+            <div class="col-md-6 col-12 wow fadeInRight pregunta" data-wow-duration="1s">
+                <label for="domExample">Domicilio</label>
+                <div class="input-group">
+                    <span class="input-group-addon" id="domInfo"><i class="fa fa-home"></i></span>
+                    <input required type="text" name="domicilio" class="form-control" id="domExample"
+                           aria-describedby="domHelp" placeholder="C/AAA">
+                </div>
+
+                <small id="domHelp" class="form-text text-muted">Introduce tu domicilio real</small>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-3 col-12 wow fadeInLeft pregunta" data-wow-duration="1s">
+                <label for="fechaexample">Fecha de nacimiento</label>
+                <div class="input-group">
+                    <span class="input-group-addon" id="fechaInfo"><i class="fa fa-calendar"></i></span>
+                    <input type="text" class="form-control" id="fechaexample"></p>
+                </div>
+                <small id="fechaHelp" class="form-text text-muted">Introduce tu fecha de nacimiento real</small>
+            </div>
+            <div class="col-md-3 col-12 wow fadeInLeft pregunta" data-wow-duration="1s">
+                <label for="fecha2example">Edad de tu vehículo</label>
+                <div class="input-group">
+                    <span class="input-group-addon" id="fecha2Info"><i class="fa fa-calendar"></i></span>
+                    <input type="text" class="form-control" id="fecha2example"></p>
+                </div>
+                <small id="fecha2Help" class="form-text text-muted">Introduce la fecha de compra de tu vehículo
+                </small>
+            </div>
+            <div class="col-12 col-md-6 wow fadeInRight genero pregunta" data-wow-duration="1s">
+                <label>Género</label>
+                <div class="input-group widget">
+                    <label for="transmission-standard">Hombre</label>
+                    <input type="radio" name="transmission" id="transmission-standard">
+                    <label for="transmission-automatic">Mujer</label>
+                    <input type="radio" name="transmission" id="transmission-automatic">
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 col-12 wow fadeInLeft pregunta" data-wow-duration="1s">
+                <label for="marcaexample">Marca de tu vehículo</label>
+                <div class="input-group">
+                    <span class="input-group-addon" id="marcaInfo"><i class="fa fa-cart-plus"></i></span>
+                    <input required type="text" name="marca" class="form-control" id="marcaexample"
+                           aria-describedby="marcaHelp" placeholder="Introduce descripción">
+                </div>
+                <small id="marcaHelp" class="form-text text-muted">Introduce la marca de tu vehículo</small>
+            </div>
+            <div class="col-md-6 col-12 wow fadeInRight pregunta" data-wow-duration="1s">
+                <label for="modexample">Modelo de tu vehículo</label>
+                <div class="input-group">
+                    <span class="input-group-addon" id="modInfo"><i class="fa fa-home"></i></span>
+                    <input required type="text" name="modelo" class="form-control" id="modexample"
+                           aria-describedby="modHelp" placeholder="C/AAA">
+                </div>
+
+                <small id="modHelp" class="form-text text-muted">Introduce tu domicilio real</small>
+            </div>
+        </div>
+        <button type="button" id="opener" class="btn btn-outline-warning">Registrarse</button>
+        <button type="reset" class="btn btn-secondary">Limpiar</button>
+    </form>
+</div>
+
+<div id="dialog" title="Primer dialog">
+    <p>¿Estás seguro de haber introducido los datos correctamente? Te recordamos que será necesario que así sea si
+        buscas adquirir cualquiera de nuestros vehículos en un futuro</p>
+
+    <button id="closer-aceptar">Aceptar</button>
+    <button id="closer-cancelar">Cancelar</button>
+</div>
+
+<footer>
+    <h6 class="text-center text-warning">Francisco Manuel Roldán Pérez &nbsp;<a href="https://github.com/FranRP"
+                                                                                data-toggle="tooltip"
+                                                                                title="Mi GitHub!!"
+                                                                                data-placement="right"><span
+            class="fa fa-github"></span></a></h6>
+
+</footer>
+
+<script>
+
+    //Toltip footer
+
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
+    //Dialog
+
+    $(function () {
+        $("#dialog").dialog({
+            autoOpen: false,
+            show: {
+                effect: "fold",
+                duration: 1000
+            }
+        });
+
+        $("#opener").on("click", function () {
+            $("#dialog").dialog("open");
+        });
+        $("#closer-aceptar").on("click", function () {
+            $("#dialog").dialog({
+                hide: {
+                    effect: "explode",
+                    duration: 1000
+                }
+            });
+            $("#dialog").dialog("close");
+
+        });
+        $("#closer-cancelar").on("click", function () {
+            $("#dialog").dialog({
+                hide: {
+                    effect: "clip",
+                    duration: 1000
+                }
+            });
+            $("#dialog").dialog("close");
+
+        });
+    });
+
+    //Cambiar theme
+
+    $("#light").click(function () {
+        if ($('#estilos').attr("href") != 'themes/light/jquery-ui.css') {
+            $('#estilos').attr("href", "themes/light/jquery-ui.css");
+            $('#info').text('Tema actual: Light')
+        }
+    });
+
+    $("#dark").click(function () {
+        if ($('#estilos').attr("href") != 'themes/darkness/jquery-ui.css') {
+            $('#estilos').attr("href", "themes/darkness/jquery-ui.css");
+            $('#info').text('Tema actual: Dark')
+        }
+    });
+
+    $("#flick").click(function () {
+        if ($('#estilos').attr("href") != 'themes/flick/jquery-ui.css') {
+            $('#estilos').attr("href", "themes/flick/jquery-ui.css");
+            $('#info').text('Tema actual: Flick')
+        }
+    });
+
+    //Cambiar el idioma de datepicker
+
+    (function (factory) {
+        if (typeof define === "function" && define.amd) {
+
+            // AMD. Register as an anonymous module.
+            define(["../widgets/datepicker"], factory);
+        } else {
+
+            // Browser globals
+            factory(jQuery.datepicker);
+        }
+    }(function (datepicker) {
+
+        $.datepicker.regional['es'] = {
+            closeText: 'Cerrar',
+            prevText: '< Ant',
+            nextText: 'Sig >',
+            currentText: 'Hoy',
+            monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+            monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+            dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+            dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Juv', 'Vie', 'Sáb'],
+            dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
+            weekHeader: 'Sm',
+            dateFormat: 'dd/mm/yy',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: false,
+            yearSuffix: ''
+        };
+        datepicker.setDefaults(datepicker.regional.es);
+
+        return datepicker.regional.es;
+
+    }));
+
+    $(function () {
+
+        $(".widget").controlgroup();
+
+        $.datepicker.setDefaults($.datepicker.regional["es"]);
+        var dateFormat = "dd/mm/yy",
+            from = $("#fecha2example,#fechaexample")
+                .datepicker({
+                    defaultDate: "+1w",
+                    changeMonth: true,
+                    showButtonPanel: true,
+                    numberOfMonths: 2,
+                    dateFormat: dateFormat
+                })
+                .on("change", function () {
+                    to.datepicker("option", "minDate", getDate(this));
+                }),
+            to = $("#calfin").datepicker({
+                defaultDate: "+1w",
+                changeMonth: true,
+                numberOfMonths: 2,
+                dateFormat: dateFormat
+            })
+                .on("change", function () {
+                    from.datepicker("option", "maxDate", getDate(this));
+                });
+
+        function getDate(element) {
+            var date;
+            try {
+                date = $.datepicker.parseDate(dateFormat, element.value);
+            } catch (error) {
+                date = null;
+            }
+
+            return date;
+        }
+
+        $("#fecha2example").datepicker();
+        $("#fechaexample").datepicker();
+
+
+        let arrayMakes = [];
+        let arraymodels = [];
+
+        $.ajax({
+            url: 'https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getMakes&sold_in_us=1',
+            dataType: "jsonp",
+            type: 'get',
+            crossDomain: true,
+            success: function (data) {
+                var resultados = data.Makes.map(function (x) {
+                    arrayMakes.unshift(x.make_id);
+                });
+
+            }
+        });
+
+        $("#marcaexample").autocomplete({
+            source: arrayMakes,
+            minLength: 1
+        });
+
+        function ObtenerModelos() {
+            $.ajax({
+                url: 'https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getModels&make=' + $("#marcaexample").val() + '&sold_in_us=1',
+                dataType: "json",
+                type: 'get',
+                success: function (data) {
+                    console.log(data.Models);
+
+                    var resultados = data.Models.map(function (x) {
+                        arraymodels.unshift(x.model_name);
+                    });
+                    console.log(arraymodels);
+                }
+            });
+        }
+
+        $("#modexample").autocomplete({
+            source: arraymodels,
+            minLength: 1
+        });
+
+
+        $("#marcaexample").change(function () {
+            ObtenerModelos();
+        });
+
+
+    });
+
+
+</script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js '
+        integrity='sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh '
+        crossorigin='anonymous '></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js '
+        integrity='sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ '
+        crossorigin='anonymous '></script>
+
+</body>
+
+</html>
