@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Hello, world!</title>
+    <title>KarsManía</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -34,7 +34,8 @@
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
-    <img src="http://gnarf.net/widget-factory/images/jqueryui_logo.png" alt="" class="img-fluid" id="logo">
+    <img src="img/logo.png"
+         alt="" class="img-fluid" id="logo">
     <a class="navbar-brand">KarsManía</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -206,11 +207,32 @@
                            aria-describedby="modHelp" placeholder="C/AAA">
                 </div>
 
-                <small id="modHelp" class="form-text text-muted">Introduce tu domicilio real</small>
+
             </div>
         </div>
-        <button type="button" id="opener" class="btn btn-outline-warning">Registrarse</button>
-        <button type="reset" class="btn btn-secondary">Limpiar</button>
+        <hr>
+        <div class="row captcha">
+            <div class="col-md-6 col-12 wow fadeIn" data-wow-duration="3s" style="margin-bottom: 50px">
+                <img src="img/dead.jpg" alt="" class="img-fluid img-thumbnail mx-auto d-block">
+            </div>
+            <div class="col-md-6 col-12 wow fadeIn" data-wow-duration="3s">
+                <h5 style="margin-bottom: 50px">Debemos comprobar que no eres un robot para finalizar el registro, así
+                    que te formulamos una
+                    sencilla pregunta
+                    relizacionada con el mundo de los superhéroes.</h5>
+                <h6>¿Quien es este enmáscarado cuyo nombre comienza por Dead?</h6>
+                <input required type="text" name="heroe" class="form-control" id="heroeexample"
+                       aria-describedby="heroeHelp" placeholder="Introduce el nombre del héroe de la imagen">
+                <small id="modHelp" style="margin-bottom: 50px" class="form-text text-muted">Introduce el nombre de
+                    Pool, ??? Pool
+                </small>
+
+                <button type="button" id="opener" class="btn btn-outline-warning">Registrarse</button>
+                <button type="reset" id="opener-limpiar" class="btn btn-secondary">Limpiar</button>
+            </div>
+        </div>
+
+
     </form>
 </div>
 
@@ -220,6 +242,13 @@
 
     <button id="closer-aceptar">Aceptar</button>
     <button id="closer-cancelar">Cancelar</button>
+</div>
+
+<div id="dialog-limpiar" title="Segundo dialog">
+    <p>¿Estás seguro de haber introducido los datos correctamente? Te recordamos que será necesario que así sea si
+        buscas adquirir cualquiera de nuestros vehículos en un futuro</p>
+    <button id="limpiar">Aceptar</button>
+
 </div>
 
 <footer>
@@ -250,14 +279,35 @@
             }
         });
 
+        $("#dialog-limpiar").dialog({
+            autoOpen: false,
+            show: {
+                effect: "scale",
+                duration: 1000
+            },
+
+            hide: {
+                effect: "slide",
+                duration: 1000
+            }
+        });
+
+        $("#opener-limpiar").on("click", function () {
+            $("#dialog-limpiar").dialog("open");
+        });
+        $("#limpiar").on("click", function () {
+            $("#dialog-limpiar").dialog("close");
+        });
+
+
         $("#opener").on("click", function () {
             $("#dialog").dialog("open");
         });
         $("#closer-aceptar").on("click", function () {
             $("#dialog").dialog({
                 hide: {
-                    effect: "explode",
-                    duration: 1000
+                    effect: "clip",
+                    duration: 2000
                 }
             });
             $("#dialog").dialog("close");
@@ -266,8 +316,8 @@
         $("#closer-cancelar").on("click", function () {
             $("#dialog").dialog({
                 hide: {
-                    effect: "clip",
-                    duration: 1000
+                    effect: "explode",
+                    duration: 2000
                 }
             });
             $("#dialog").dialog("close");
@@ -376,6 +426,30 @@
         $("#fecha2example").datepicker();
         $("#fechaexample").datepicker();
 
+
+        //Peticiones ajax
+
+        $(function () {
+            $("#heroeexample").autocomplete({
+                source: function (request, response) {
+                    $.ajax({
+                        url: 'https://gateway.marvel.com/v1/public/characters?nameStartsWith=' + $('#heroeexample').val() + '&apikey=c16ce023e325ddf234fedcfa8c240ab8&ts=9&hash=544c93cc95c797fa8b665a6aa5a8a5e5',
+                        dataType: "json",
+                        type: 'get',
+                        success: function (data) {
+                            let array = [];
+                            for (var x = 0; x < data.data.results.length; x++) {
+                                array.push(data.data.results[x].name);
+                            }
+                            console.log(array);
+                            response(array);
+
+                        }
+                    });
+                },
+                minLength: 1
+            });
+        });
 
         let arrayMakes = [];
         let arraymodels = [];

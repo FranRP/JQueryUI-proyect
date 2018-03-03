@@ -34,6 +34,11 @@ img + a {
     margin-top: 30px;
 }
 
+.captcha {
+    color: #595959;
+    font-family: "Fira Code Light";
+}
+
 .cuerpo h1 {
     font-weight: bold;
     font-family: "Dancing Script";
