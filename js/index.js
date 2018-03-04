@@ -140,7 +140,11 @@ $("#custom").click(function () {
 
 $(function () {
 
+    //Controlgroup iniciado
+
     $(".widget").controlgroup();
+
+    //-------------------
 
     $.datepicker.setDefaults($.datepicker.regional["es"]);
     var dateFormat = "dd/mm/yy",
