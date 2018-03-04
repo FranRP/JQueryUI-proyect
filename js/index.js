@@ -9,14 +9,39 @@ $(document).ready(function () {
 $(function () {
     $("#dialog").dialog({
         autoOpen: false,
+        resizable: false,
+        height: "auto",
         show: {
             effect: "fold",
             duration: 1000
+        },
+        buttons: {
+            "Aceptar": function () {
+                $("#dialog").dialog({
+                    hide: {
+                        effect: "clip",
+                        duration: 2000
+                    }
+                });
+                $(this).dialog("close");
+            },
+            Cancelar: function () {
+                $("#dialog").dialog({
+                    hide: {
+                        effect: "explode",
+                        duration: 2000
+                    }
+                });
+                $(this).dialog("close");
+
+            }
         }
     });
 
     $("#dialog-limpiar").dialog({
         autoOpen: false,
+        resizable: false,
+        height: "auto",
         show: {
             effect: "scale",
             duration: 1000
@@ -25,40 +50,25 @@ $(function () {
         hide: {
             effect: "slide",
             duration: 1000
+        },
+        buttons: {
+            "Aceptar": function () {
+                $(this).dialog("close");
+            }
         }
+
+
     });
 
     $("#opener-limpiar").on("click", function () {
         $("#dialog-limpiar").dialog("open");
-    });
-    $("#limpiar").on("click", function () {
-        $("#dialog-limpiar").dialog("close");
     });
 
 
     $("#opener").on("click", function () {
         $("#dialog").dialog("open");
     });
-    $("#closer-aceptar").on("click", function () {
-        $("#dialog").dialog({
-            hide: {
-                effect: "clip",
-                duration: 2000
-            }
-        });
-        $("#dialog").dialog("close");
 
-    });
-    $("#closer-cancelar").on("click", function () {
-        $("#dialog").dialog({
-            hide: {
-                effect: "explode",
-                duration: 2000
-            }
-        });
-        $("#dialog").dialog("close");
-
-    });
 });
 
 //Cambiar theme
@@ -81,6 +91,13 @@ $("#flick").click(function () {
     if ($('#estilos').attr("href") != 'themes/flick/jquery-ui.css') {
         $('#estilos').attr("href", "themes/flick/jquery-ui.css");
         $('#info').text('Tema actual: Flick')
+    }
+});
+
+$("#custom").click(function () {
+    if ($('#estilos').attr("href") != 'themes/custom/jquery-ui.css') {
+        $('#estilos').attr("href", "themes/custom/jquery-ui.css");
+        $('#info').text('Tema actual: Custom')
     }
 });
 
