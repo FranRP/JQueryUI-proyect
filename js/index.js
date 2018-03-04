@@ -1,4 +1,4 @@
-//Toltip footer
+//Toltip footer y manejo del navbar con scroll
 
 $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();

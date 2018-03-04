@@ -21,27 +21,15 @@ img + a {
 
 }
 
-.carousel-caption {
-    font-family: "Dancing Script";
-    bottom: 225px !important;
-}
-
 .cuerpo {
     margin-top: 30px;
 }
 
+/*Controla la imagen de captcha*/
+
 .captcha {
     color: #595959;
     font-family: "Fira Code Light";
-}
-
-.carousel-item img {
-    width: 100%;
-    max-height: 550px;
-}
-
-.carousel-item img {
-    min-height: 250px;
 }
 
 .cuerpo h1 {
@@ -54,12 +42,6 @@ img + a {
     width: 20px;
 }
 
-footer {
-    margin-top: 30px;
-    background-color: #343A40;
-    padding: 30px;
-}
-
 .pregunta {
     margin-bottom: 30px;
 }
@@ -68,10 +50,24 @@ span th {
     color: #a5a5a5;
 }
 
+/*footer*/
+
+footer {
+    margin-top: 30px;
+    background-color: #343A40;
+    padding: 30px;
+}
+
 footer span {
     font-size: 25px !important;
     color: white;
 }
+
+.drop, footer h6 {
+    color: #35cbdf;
+}
+
+/*Manejo del navbar*/
 
 .top-nav {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -96,10 +92,6 @@ footer span {
     transition: 0.5s ease-in;
     -webkit-transition: 0.5s ease-in;
     -moz-transition: 0.5s ease-in;
-}
-
-.drop, footer h6 {
-    color: #35cbdf;
 }
 
 .top-nav .navbar-brand {
@@ -136,7 +128,7 @@ footer span {
     -moz-transition: 0.5s ease-in;
 }
 
-/* ========== Intro Header ========== */
+/*Manejo de las imagenes y del carousel*/
 
 .intro .carousel-item::before {
     content: "";
@@ -146,9 +138,25 @@ footer span {
     height: 100vh;
 }
 
+.carousel-item img {
+    width: 100%;
+    max-height: 550px;
+}
+
+.carousel-item img {
+    min-height: 250px;
+}
+
+.carousel-caption {
+    font-family: "Dancing Script";
+    bottom: 225px !important;
+}
+
 .intro .carousel-caption {
     top: 25%;
 }
+
+/*MediaQuery manejando el carousel y el navbar top*/
 
 @media (max-width: 767px) {
 
