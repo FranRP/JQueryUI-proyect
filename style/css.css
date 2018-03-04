@@ -59,7 +59,11 @@ footer {
     margin-bottom: 30px;
 }
 
-span {
+span th {
+    color: #a5a5a5;
+}
+
+footer span {
     font-size: 25px !important;
     color: white;
 }
