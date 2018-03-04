@@ -36,7 +36,7 @@ $(function () {
                 });
                 $(this).dialog("close");
             },
-            Cancelar: function () {
+            "Cancelar": function () {
                 $("#dialog").dialog({
                     hide: {
                         effect: "explode",
@@ -45,6 +45,24 @@ $(function () {
                 });
                 $(this).dialog("close");
 
+            },
+            "Theme Light": function () {
+                if ($('#estilos').attr("href") != 'themes/light/jquery-ui.css') {
+                    $('#estilos').attr("href", "themes/light/jquery-ui.css");
+                    $('#info').text('Tema actual: Light')
+                }
+            },
+            "Theme Dark": function () {
+                if ($('#estilos').attr("href") != 'themes/darkness/jquery-ui.css') {
+                    $('#estilos').attr("href", "themes/darkness/jquery-ui.css");
+                    $('#info').text('Tema actual: Dark')
+                }
+            },
+            "Theme flick": function () {
+                if ($('#estilos').attr("href") != 'themes/flick/jquery-ui.css') {
+                    $('#estilos').attr("href", "themes/flick/jquery-ui.css");
+                    $('#info').text('Tema actual: Flick')
+                }
             }
         }
     });
@@ -65,6 +83,24 @@ $(function () {
         buttons: {
             "Aceptar": function () {
                 $(this).dialog("close");
+            },
+            "Theme Light": function () {
+                if ($('#estilos').attr("href") != 'themes/light/jquery-ui.css') {
+                    $('#estilos').attr("href", "themes/light/jquery-ui.css");
+                    $('#info').text('Tema actual: Light')
+                }
+            },
+            "Theme Dark": function () {
+                if ($('#estilos').attr("href") != 'themes/darkness/jquery-ui.css') {
+                    $('#estilos').attr("href", "themes/darkness/jquery-ui.css");
+                    $('#info').text('Tema actual: Dark')
+                }
+            },
+            "Theme flick": function () {
+                if ($('#estilos').attr("href") != 'themes/flick/jquery-ui.css') {
+                    $('#estilos').attr("href", "themes/flick/jquery-ui.css");
+                    $('#info').text('Tema actual: Flick')
+                }
             }
         }
 
@@ -84,33 +120,27 @@ $(function () {
 
 //Cambiar theme
 
-$("#light").click(function () {
+$(".light").click(function () {
     if ($('#estilos').attr("href") != 'themes/light/jquery-ui.css') {
         $('#estilos').attr("href", "themes/light/jquery-ui.css");
         $('#info').text('Tema actual: Light')
     }
 });
 
-$("#dark").click(function () {
+$(".dark").click(function () {
     if ($('#estilos').attr("href") != 'themes/darkness/jquery-ui.css') {
         $('#estilos').attr("href", "themes/darkness/jquery-ui.css");
         $('#info').text('Tema actual: Dark')
     }
 });
 
-$("#flick").click(function () {
+$(".flick").click(function () {
     if ($('#estilos').attr("href") != 'themes/flick/jquery-ui.css') {
         $('#estilos').attr("href", "themes/flick/jquery-ui.css");
         $('#info').text('Tema actual: Flick')
     }
 });
 
-$("#custom").click(function () {
-    if ($('#estilos').attr("href") != 'themes/custom/jquery-ui.css') {
-        $('#estilos').attr("href", "themes/custom/jquery-ui.css");
-        $('#info').text('Tema actual: Custom')
-    }
-});
 
 //Cambiar el idioma de datepicker
 
