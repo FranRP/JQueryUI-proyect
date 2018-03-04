@@ -21,10 +21,15 @@ $(function () {
     $("#dialog").dialog({
         autoOpen: false,
         resizable: false,
+        modal: true,
         height: "auto",
         show: {
             effect: "fold",
             duration: 1000
+        },
+        hide: {
+            effect: "explode",
+            duration: 2000
         },
         buttons: {
             "Aceptar": function () {
@@ -69,6 +74,7 @@ $(function () {
 
     $("#dialog-limpiar").dialog({
         autoOpen: false,
+        modal: true,
         resizable: false,
         height: "auto",
         show: {
