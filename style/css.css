@@ -103,7 +103,7 @@ footer span {
 .top-nav.light-header {
     min-height: 75px;
     background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
     transition: 0.5s ease-in;
     -webkit-transition: 0.5s ease-in;
     -moz-transition: 0.5s ease-in;
