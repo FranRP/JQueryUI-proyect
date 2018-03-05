@@ -23,9 +23,6 @@ $(function () {
         resizable: false,
         modal: true,
         height: "auto",
-        animate: {
-            color: "red"
-        },
         show: {
             effect: "fold",
             duration: 1000,
