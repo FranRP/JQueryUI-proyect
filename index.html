@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="style/animate.css">
     <script src="js/wow.min.js"></script>
     <link id="estilos" type="text/css" rel="stylesheet" href="themes/light/jquery-ui.css"/>
+    <link id="dialogstyle" type="text/css" rel="stylesheet" href="themes/cuperControlGroup/jquery-ui.css"/>
+    <link id="dialogstyle2" type="text/css" rel="stylesheet" href="themes/bikeDate/jquery-ui.css"/>
     <script>
         new WOW().init();
     </script>
@@ -158,7 +160,7 @@
             </div>
         </div>
         <div class="form-row">
-            <div class="col-md-3 col-12 wow fadeInLeft pregunta" data-wow-duration="1s">
+            <div class="col-md-6 col-12 col-lg-3 wow fadeInLeft pregunta" data-wow-duration="1s">
                 <label for="fechaexample">Fecha de nacimiento</label>
                 <div class="input-group">
                     <span class="input-group-addon" id="fechaInfo"><i class="fa fa-calendar"></i></span>
@@ -166,7 +168,7 @@
                 </div>
                 <small id="fechaHelp" class="form-text text-muted">Introduce tu fecha de nacimiento real</small>
             </div>
-            <div class="col-md-3 col-12 wow fadeInLeft pregunta" data-wow-duration="1s">
+            <div class="col-md-6 col-12 col-lg-3 wow fadeInLeft pregunta" data-wow-duration="1s">
                 <label for="fecha2example">Edad de tu vehículo</label>
                 <div class="input-group">
                     <span class="input-group-addon" id="fecha2Info"><i class="fa fa-calendar"></i></span>
@@ -175,15 +177,25 @@
                 <small id="fecha2Help" class="form-text text-muted">Introduce la fecha de compra de tu vehículo
                 </small>
             </div>
-            <div class="col-12 col-md-6 wow fadeInRight genero pregunta" data-wow-duration="1s">
-                <label>Género</label>
+            <div class="col-12 col-md-6 col-lg 3 wow fadeInRight genero pregunta marchas" data-wow-duration="1s">
+                <label>Cambios</label>
                 <div class="input-group widget">
-                    <label for="transmission-standard">Hombre</label>
+                    <label for="transmission-standard">Manual</label>
                     <input type="radio" name="transmission" id="transmission-standard">
-                    <label for="transmission-automatic">Mujer</label>
+                    <label for="transmission-automatic">Auto</label>
                     <input type="radio" name="transmission" id="transmission-automatic">
                 </div>
             </div>
+            <div class="col-12 col-md-6 col-lg-3 wow fadeInRight genero pregunta cuper" data-wow-duration="1s">
+                <label>Género</label>
+                <div class="input-group widget">
+                    <label for="transmission-male">Hombre</label>
+                    <input type="radio" name="transmission-g" id="transmission-male">
+                    <label for="transmission-female">Mujer</label>
+                    <input type="radio" name="transmission-g" id="transmission-female">
+                </div>
+            </div>
+
         </div>
         <div class="form-row">
             <div class="col-md-6 col-12 wow fadeInLeft pregunta" data-wow-duration="1s">

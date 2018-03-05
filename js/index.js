@@ -25,11 +25,15 @@ $(function () {
         height: "auto",
         show: {
             effect: "fold",
-            duration: 1000
+            duration: 1000,
+            easing: "linear",
+            queue: false
         },
         hide: {
             effect: "explode",
-            duration: 2000
+            duration: 2000,
+            easing: "_default",
+            queue: true
         },
         buttons: {
             "Aceptar": function () {
