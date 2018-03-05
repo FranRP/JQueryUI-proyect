@@ -30,7 +30,7 @@ $(function () {
             effect: "fold",
             duration: 1000,
             horizFirst: true,
-            size: 50,
+            size: 70,
             easing: "linear"
         },
         hide: {
