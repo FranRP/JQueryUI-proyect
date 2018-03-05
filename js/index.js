@@ -89,7 +89,10 @@ $(function () {
         height: "auto",
         show: {
             effect: "scale",
-            duration: 1000
+            origin: ['middle', 'right'],
+            duration: 1000,
+            scale: "box",
+            percent: 50
         },
 
         hide: {
