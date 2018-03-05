@@ -54,7 +54,7 @@ $(function () {
                 $("#dialog").dialog({
                     hide: {
                         effect: "explode",
-                        pieces: 10,
+                        pieces: 25,
                         duration: 2000
                     }
                 });
