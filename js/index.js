@@ -29,11 +29,13 @@ $(function () {
         show: {
             effect: "fold",
             duration: 1000,
-            easing: "linear",
-            queue: false
+            horizFirst: true,
+            size: 50,
+            easing: "linear"
         },
         hide: {
             effect: "explode",
+            pieces: 25,
             duration: 2000,
             easing: "linear",
             queue: false
@@ -52,6 +54,7 @@ $(function () {
                 $("#dialog").dialog({
                     hide: {
                         effect: "explode",
+                        pieces: 10,
                         duration: 2000
                     }
                 });
