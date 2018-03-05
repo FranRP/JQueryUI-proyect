@@ -33,7 +33,9 @@ $(function () {
         hide: {
             effect: "explode",
             pieces: 25,
-            duration: 2000
+            duration: 2000,
+            easing: "linear",
+            queue: false
         },
         buttons: {
             "Aceptar": function () {
