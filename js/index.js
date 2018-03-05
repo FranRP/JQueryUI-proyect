@@ -23,6 +23,9 @@ $(function () {
         resizable: false,
         modal: true,
         height: "auto",
+        animate: {
+            color: "red"
+        },
         show: {
             effect: "fold",
             duration: 1000,
@@ -32,8 +35,8 @@ $(function () {
         hide: {
             effect: "explode",
             duration: 2000,
-            easing: "_default",
-            queue: true
+            easing: "linear",
+            queue: false
         },
         buttons: {
             "Aceptar": function () {
